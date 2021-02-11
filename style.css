@@ -1,0 +1,29 @@
+.checkOutForm
+{
+    width: 600px;
+    height: auto;
+    padding: 20px;
+    margin: 0px auto;
+    background-color: rgb(162, 179, 173);
+}
+.inputSection{
+    width: 550px;
+    display: flex;
+}
+.payment{
+    width: 600px;
+    height: auto;
+    background-color: bisque;
+    padding: 20px;
+    text-align: center;
+    margin: 0px  auto;
+    margin-top: 20px;
+    
+}
+#checkOut{
+    display: none;
+    margin: 30px;
+}
+#paymentNow{
+    display: none;
+}
