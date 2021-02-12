@@ -1,11 +1,10 @@
-// const calculationPhone=()=>{
-//     allCalculation();
-// }
-const allCalculation=()=>{
-    const phoneName=document.getElementById('phoneName').innerText;
+
+
+const allCalculation=product=>{
+    const phoneName=document.getElementById(product +'PhoneName').innerText;
     const names=document.getElementById('names');
     names.value=phoneName;
-    const pricePhone=document.getElementById('pricePhone').innerText;
+    const pricePhone=document.getElementById(product + 'PricePhone').innerText;
     const price=parseFloat(pricePhone);
     const priceCount=document.getElementById('priceCount');
     priceCount.value= `${price}`;
@@ -35,13 +34,20 @@ numberDecrease.addEventListener('click',function(){
 })
 
 const numberCountCalculation=(numberCount)=>{
-    const calculation=numberCount*1130;
+    let calculation=numberCount*1200;
+    document.getElementById('totalNumberCount').value=numberCount;
     document.getElementById('priceCount').value=calculation;
+    newAll(calculation);
+    
+}
+const newAll=calculation=>{
     const tax=.2*calculation;
     document.getElementById('tax').value=tax;
     const totalAmount=tax+calculation;
+    calculationNew(tax,totalAmount,calculation);
+}
+const calculationNew=(tax,totalAmount,calculation)=>{
     document.getElementById('total').value=totalAmount;
-    document.getElementById('totalNumberCount').value=numberCount;
     document.getElementById('subTotal').value=calculation;
     document.getElementById('totalTax').value=tax;
     document.getElementById('totalCost').value=totalAmount;
